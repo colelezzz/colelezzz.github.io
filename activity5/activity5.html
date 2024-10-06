@@ -26,6 +26,21 @@
             text-align: center;
         }
 
+        .hero-section h1 {
+            font-size: 4rem;
+            margin-top: 50px;
+            text-shadow: 6px 6px 20px rgba(0, 0, 0, 1);
+            font-weight: 900;
+        }
+
+        .hero-section p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            text-align: center;
+            text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.9);
+            font-weight: 700;
+        }
+
         .section {
             padding: 60px 0;
             background: transparent !important;
@@ -49,7 +64,33 @@
         p {
             text-align: justify;
         }
+
+        .highlight-card {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .highlight-card:hover {
+            transform: scale(1.05);
+        }
+
+        .highlight-card .card-img-top {
+            transition: none;
+            transform: none;
+        }
+
+        .img-fluid {
+            transition: none;
+        }
+
+        .img-fluid:not(.card-img-top) {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .img-fluid:not(.card-img-top):hover {
+            transform: scale(1.05);
+        }
     </style>
+
 </head>
 
 <body>
@@ -61,9 +102,10 @@
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
@@ -88,9 +130,10 @@
     <section class="hero-section">
         <div class="container">
             <h1 style="font-size: 4rem; margin-top: 50px;">Discover Tiaong</h1>
-            <p style="font-size: 1.5rem; margin-top: 10px; text-align: center;">The First Town in the Province of Quezon</p>
+            <p style="font-size: 1.5rem; margin-top: 10px; text-align: center;">The First Town in the Province of Quezon
+            </p>
         </div>
-    </section>     
+    </section>
 
     <section id="about" class="section bg-light">
         <div class="container">
@@ -114,8 +157,8 @@
                 <div class="col-md-6">
                     <img src="./coconut.jpg" alt="Coconut Farm at Cabay, Tiaong Quezon" class="img-fluid"
                         style="width: 600px; height: 300px; padding-left: 20px">
-                    <p style="text-align: center; font-size: 12px; padding-left: 20px">Coconut Farm at Cabay, Tiaong
-                        Quezon</p>
+                    <p style="text-align: center; font-size: 15px; color: white; margin-top: 10px;">
+                        Coconut Farm at Cabay, Tiaong Quezon</p>
                 </div>
             </div>
         </div>
@@ -158,17 +201,19 @@
                 <div class="col-md-4 mb-4">
                     <img src="./whiteHouse.jpg" alt="White House Museum" class="img-fluid"
                         style="width: 500px; height: 300px">
-                    <p style="text-align: center; font-size: 15px; color:white">White House Museum in
+                    <p style="text-align: center; font-size: 15px; color:white; margin-top: 10px;">White House Museum in
                         Lumingon, Tiaong Quezon</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <img src="./church.jpg" alt="Pink Church" class="img-fluid" style="width: 500px; height: 300p">
-                    <p style="text-align: center; font-size: 15px; color: white">St. John The Baptist Parish
+                    <p style="text-align: center; font-size: 15px; color: white; margin-top: 10px;">St. John The Baptist
+                        Parish
                         Church - 1996</p>
                 </div>
                 <div class="col-md-4 mb-4">
                     <img src="./lakeTikub.jpg" alt="Kyoto Shrine" class="img-fluid" style="width: 500px; height: 300px">
-                    <p style="text-align: center; font-size: 15px; color: white">The Lake Tikub of Tiaong,
+                    <p style="text-align: center; font-size: 15px; color: white; margin-top: 10px;">The Lake Tikub of
+                        Tiaong,
                         Quezon</p>
                 </div>
             </div>
