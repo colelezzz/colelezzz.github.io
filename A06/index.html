@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Activity 6</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+        }
+
+        .filter-btn {
+            margin-right: 10px;
+        }
+
+        .filter-btn,
+        #btnExpand,
+        .navbar .btn {
+            background-color: black;
+            color: white;
+            border-color: black;
+        }
+
+        .filter-btn:hover,
+        #btnExpand:hover {
+            background-color: #555;
+            color: white;
+            border-color: #555;
+        }
+
+        .filter-btn:focus,
+        #btnExpand:focus {
+            outline: none;
+            box-shadow: none;
+        }
+
+        .banner {
+            background-image: url('images/me.JPG');
+            background-size: cover;
+            background-position: right center;
+            height: 50vh;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner h1 {
+            font-weight: bold;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .banner p {
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .contact-btn {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .contact-btn:hover {
+            background-color: #555;
+            color: white;
+        }
+
+        .gallery-img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .gallery-item {
+            display: none;
+        }
+
+
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item.visible {
+            display: block;
+        }
+
+        #footer {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            display: none;
+        }
+
+        .footer-content {
+            font-size: 1rem;
+        }
+
+        [data-bs-theme="dark"] {
+            background-color: #333;
+            color: white;
+        }
+
+        [data-bs-theme="light"] {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+
+<body id="body" data-bs-theme="light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">ICONLEE</a>
+            <button class="btn btn-outline-secondary" onclick="changeMode()">Mode</button>
+        </div>
+    </nav>
+
+    <section class="banner">
+        <div class="text-content">
+            <h1 class="display-3">Hello! I'm Coleen Isles</h1>
+            <p class="lead">Coleen: Your Vision, Through My Lens</p>
+            <a href="contact.html" class="btn contact-btn mt-3">Contact Me</a>
+        </div>
+    </section>
+
+    <section class="container text-center my-5">
+        <button class="btn filter-btn" onclick="filterGallery('all')">All</button>
+        <button class="btn filter-btn" onclick="filterGallery('family')">Family</button>
+        <button class="btn filter-btn" onclick="filterGallery('friends')">Friends</button>
+        <button class="btn filter-btn" onclick="filterGallery('foods')">Food</button>
+        <button class="btn filter-btn" onclick="filterGallery('dogs')">Dogs</button>
+    </section>
+
+    <section class="container">
+        <div class="row" id="galleryContainer"></div>
+    </section>
+
+    <section class="text-center my-5">
+        <button class="btn btn-outline-secondary" onclick="toggleGallery()" id="btnExpand">Expand</button>
+    </section>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top"
+        style="padding: 20px;">
+        <div class="col-md-4 d-flex align-items-center">
+            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Isles, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3">
+                <a class="text-body-secondary" href="https://x.com/coleenislesss"><i class="bi bi-twitter"></i></a>
+            </li>
+            <li class="ms-3">
+                <a class="text-body-secondary" href="https://www.instagram.com/cln.selsi/"><i
+                        class="bi bi-instagram"></i></a>
+            </li>
+            <li class="ms-3">
+                <a class="text-body-secondary" href="https://www.facebook.com/coleen.isles"><i
+                        class="bi bi-facebook"></i></a>
+            </li>
+        </ul>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+    <script>
+        var currentCategory = 'all';
+        var isExpanded = false;
+
+        var galleryItems = [
+            { title: "fam1", img: "./images/fam1.jpg", category: "family" },
+            { title: "fam2", img: "./images/fam2.JPG", category: "family" },
+            { title: "fam3", img: "./images/fam3.jpg", category: "family" },
+            { title: "fam4", img: "./images/fam4.jpg", category: "family" },
+            { title: "fam5", img: "./images/fam5.jpg", category: "family" },
+            { title: "fam6", img: "./images/fam6.jpg", category: "family" },
+            { title: "friend1", img: "./images/friend1.jpg", category: "friends" },
+            { title: "friend2", img: "./images/friend2.jpg", category: "friends" },
+            { title: "friend3", img: "./images/friend3.jpg", category: "friends" },
+            { title: "friend4", img: "./images/friend4.jpg", category: "friends" },
+            { title: "friend5", img: "./images/friend5.jpg", category: "friends" },
+            { title: "friend6", img: "./images/friend6.jpg", category: "friends" },
+            { title: "food1", img: "./images/food1.JPG", category: "foods" },
+            { title: "food2", img: "./images/food2.JPG", category: "foods" },
+            { title: "food3", img: "./images/food3.jpg", category: "foods" },
+            { title: "food4", img: "./images/food4.jpg", category: "foods" },
+            { title: "food5", img: "./images/food5.jpg", category: "foods" },
+            { title: "food6", img: "./images/food6.jpg", category: "foods" },
+            { title: "food7", img: "./images/food7.jpg", category: "foods" },
+            { title: "food8", img: "./images/food8.jpg", category: "foods" },
+            { title: "dog1", img: "./images/dog1.jpg", category: "dogs" },
+            { title: "dog2", img: "./images/dog2.jpg", category: "dogs" },
+            { title: "dog3", img: "./images/dog3.jpg", category: "dogs" },
+            { title: "dog4", img: "./images/dog4.jpg", category: "dogs" },
+            { title: "dog5", img: "./images/dog5.jpg", category: "dogs" },
+            { title: "dog6", img: "./images/dog6.jpg", category: "dogs" },
+            { title: "dog7", img: "./images/dog7.jpg", category: "dogs" },
+            { title: "dog8", img: "./images/dog8.jpg", category: "dogs" },
+        ];
+
+        function loadGallery() {
+            var container = document.getElementById("galleryContainer");
+            container.innerHTML = '';
+            for (var i = 0; i < galleryItems.length; i++) {
+                container.innerHTML += `
+                <div class="col-xl-3 col-md-4 col-sm-6 col-12 gallery-item" data-category="${galleryItems[i].category}">
+                    <img src="${galleryItems[i].img}" class="gallery-img" alt="${galleryItems[i].title}">
+                </div>`;
+            }
+            resetVisibleItems();
+        }
+
+        function filterGallery(category) {
+            currentCategory = category;
+            isExpanded = false;
+            resetVisibleItems();
+            document.getElementById("btnExpand").textContent = 'Expand';
+        }
+
+        function resetVisibleItems() {
+            var items = document.getElementsByClassName('gallery-item');
+            var count = 0;
+            for (var i = 0; i < items.length; i++) {
+                if (currentCategory === 'all' || items[i].dataset.category === currentCategory) {
+                    if (isExpanded || count < 4) {
+                        items[i].classList.add('visible');
+                        count++;
+                    } else {
+                        items[i].classList.remove('visible');
+                    }
+                } else {
+                    items[i].classList.remove('visible');
+                }
+            }
+        }
+
+        function toggleGallery() {
+            isExpanded = !isExpanded;
+            resetVisibleItems();
+            document.getElementById("btnExpand").textContent = isExpanded ? 'Collapse' : 'Expand';
+        }
+
+        loadGallery();
+
+        function changeMode() {
+            var body = document.getElementById("body");
+            body.dataset.bsTheme = body.dataset.bsTheme === "light" ? "dark" : "light";
+            document.getElementById("footer").style.display = (body.dataset.bsTheme === "dark") ? "block" : "none";
+        }
+
+        loadGallery();
+    </script>
+</body>
+
+</html>
