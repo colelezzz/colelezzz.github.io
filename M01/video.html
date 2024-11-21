@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development | Video</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="icon.png">
+    <style>
+        body {
+            font-family: 'Tahoma', Verdana, Segoe UI, Geneva, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            color: #222;
+            overflow-x: hidden;
+        }
+
+        header {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        header .container-fluid,
+        header .container {
+            height: 100%;
+            width: 100%;
+            padding: 0;
+        }
+
+        .containerVideo {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .containerVideo video {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+
+        .parallax-section {
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        .parallax-content {
+            position: sticky;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .parallax-section h2,
+        .parallax-section p {
+            margin: 10px 0;
+        }
+
+        footer {
+            background-color: black;
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        footer a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        footer .footer-content {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            background-color: #000000b2;
+        }
+
+        footer a:hover {
+            color: #8400ff;
+        }
+
+        footer span {
+            color: white;
+        }
+
+        section {
+            background-size: cover;
+            color: white;
+            background-color: var(--bg, --color-black);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col-12 position-relative">
+                    <div class="containerVideo">
+                        <video autoplay loop muted>
+                            <source src="video.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="parallax-section container-fluid"
+        style="background-image: url(gif1.gif);">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-12 text-center">
+                    <h1 class="text-white" style="text-shadow: 3px 3px black;">
+                        This website is a blend of creativity and personality, where the spotlight is uniquely on me,
+                        Coleen Isles. At the heart of the site is a captivating video that sets the tone—a visual
+                        representation of my passions, inspirations, or the vibe I want to share with visitors.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-section container-fluid"
+        style="background-image: url(gif2.gif);">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-12 text-center">
+                    <h1 class="text-white" style="text-shadow: 3px 3px black;">
+                        Here, you’ll experience a glimpse into my world—a space where rainy days and sunny moments come
+                        together to tell a story. The calming rain reflects my love for introspection and growth, while
+                        the bright sunshine represents my passion for creativity and the pursuit of brighter horizons.
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-section container-fluid"
+        style="background-image: url(gif3.gif);">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-12 text-center">
+                    <h1 class="text-dark" style="text-shadow: 3px 3px white;">
+                        This website is more than just visuals; it’s a celebration of how life’s contrasts inspire me.
+                        Through this mix of serene showers and radiant light, I hope to share the beauty of finding
+                        balance, much like my journey in embracing challenges and chasing dreams. Thank you for
+                        exploring this piece of my passion!
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="parallax-section container-fluid"
+        style="background-image: url(gif4.gif);">
+        <div class="container-fluid p-0">
+            <div class="row justify-content-center align-items-center" style="height: 100vh;">
+                <div class="col-12 text-center">
+                    <h1 class="text-dark" style="text-shadow: 3px 3px white;">
+                        Feel free to explore, and thank you for stopping by!
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <div class="col-md-4 d-flex align-items-center footerContent">
+                <span class="mb-3 mb-md-0">© 2024 Isles, Inc</span>
+            </div>
+            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footerContent">
+                <li class="ms-3">
+                    <a href="https://x.com/coleenislesss"><i class="bi bi-twitter"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.instagram.com/cln.selsi/"><i class="bi bi-instagram"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://www.facebook.com/coleen.isles"><i class="bi bi-facebook"></i></a>
+                </li>
+                <li class="ms-3">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=islesleen@gmail.com" target="_blank">
+                        <i class="bi bi-envelope"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
