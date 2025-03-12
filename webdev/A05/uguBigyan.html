@@ -32,17 +32,9 @@
             background-color: #02203d !important;
         }
 
-        .iframe-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 500px;
-            max-width: 650px;
-            background: #486bdd;
-            padding: 10px;
-            margin: 0 auto;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
-            border-radius: 10px;
+        .navbar-brand {
+            font-size: 1rem;
+            white-space: nowrap;
         }
 
         footer {
@@ -62,6 +54,45 @@
 
         .img-fluid:hover {
             transform: scale(1.05);
+        }
+
+        .iframe-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 650px;
+            background: #921ae8;
+            padding: 10px;
+            margin: 0 auto;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 300px;
+            max-height: 500px;
+        }
+
+        @media (max-width: 480px) {
+            .iframe-container {
+                width: 100%;
+                padding: 5px;
+            }
+
+            .iframe-container iframe {
+                min-height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar-brand {
+                font-size: 0.8rem;
+                text-align: center;
+                display: block;
+            }
         }
     </style>
 </head>

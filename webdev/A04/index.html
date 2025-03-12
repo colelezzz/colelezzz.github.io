@@ -110,7 +110,7 @@
             font-size: 1rem;
             color: #555;
         }
-        
+
         footer {
             padding: 0.8px;
             color: rgb(104, 103, 103);
@@ -126,6 +126,11 @@
             color: inherit;
         }
 
+        @media (max-width: 768px) {
+            .headerText {
+                font-size: 2.5rem;
+            }
+        }
     </style>
 </head>
 
@@ -192,7 +197,7 @@
                         </p>
                         <a href="https://www.apple.com/ph/iphone-16/specs/">
                             <button class="btn btn-info">Learn More</button>
-                            </a>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -218,32 +223,39 @@
                 <p>Built with precision and cutting-edge technology.</p>
             </div>
         </div>
-    </div>    
+    </div>
 
     <footer id="footer">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-            <div class="col-md-4 d-flex align-items-center footerContent">
-                <span class="mb-3 mb-md-0">© 2024 Isles, Inc</span>
+        <div class="container">
+            <div class="row align-items-center text-center text-md-start flex-column flex-md-row">
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-start footerContent mb-2 mb-md-0">
+                    <span>© 2024 Isles, Inc</span>
+                </div>
+    
+                <div class="col-md-4 d-none d-md-block"></div>
+    
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end footerContent">
+                    <ul class="nav list-unstyled d-flex">
+                        <li class="mx-2">
+                            <a href="https://x.com/coleenislesss"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="https://www.instagram.com/cln.selsi/"><i class="bi bi-instagram"></i></a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="https://www.facebook.com/coleen.isles"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="mx-2">
+                            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=islesleen@gmail.com" target="_blank">
+                                <i class="bi bi-envelope"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footerContent">
-                <li class="ms-3">
-                    <a href="https://x.com/coleenislesss"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://www.instagram.com/cln.selsi/"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://www.facebook.com/coleen.isles"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=islesleen@gmail.com" target="_blank">
-                        <i class="bi bi-envelope"></i>
-                    </a>
-                </li>
-            </ul>
         </div>
     </footer>
-
+ 
 </body>
 
 </html>

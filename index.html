@@ -2,655 +2,607 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Development</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Jellybelly&display=swap" rel="stylesheet">
-    <link rel="icon" href="images/icon.png">
+  <meta charset="utf-8">
+  <title>Coleen Isles | Portfolio</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
 
-    <style>
-        body {
-            font-family: 'Tahoma', Verdana, Segoe UI, Geneva, sans-serif;
-            background: linear-gradient(135deg, #6707ac, #486bdd, #ae41bc);
-            color: #222;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-        }
+  <link href="img/favicon.png" rel="icon">
 
-        header {
-            background-color: #1d1e42;
-            padding: 15px 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-        }
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/5.5.3/css/ionicons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-        header .navbar {
-            color: white;
-            justify-content: space-between;
-        }
+  <link href="assets/css/style.css" rel="stylesheet">
 
-        .navbar-brand {
-            font-weight: bold;
-            color: white;
-            font-size: 1.5rem;
-        }
-
-        .nav-link {
-            color: white;
-            margin-right: 15px;
-        }
-
-        .nav-link:hover {
-            color: #605d5d;
-        }
-
-        .navbar-toggler-icon {
-            background-color: #fff;
-        }
-
-        .navbar-nav .nav-item .dropdown-menu {
-            background-color: #333;
-            border: none;
-        }
-
-        .navbar-nav .nav-item .dropdown-menu a {
-            color: #fff;
-        }
-
-        .navbar-nav .nav-item .dropdown-menu a:hover {
-            color: #f0f0f0;
-            background-color: #444;
-        }
-
-        .showcase {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .imageShowcase {
-            position: relative;
-            width: 100%;
-            height: 100%;
-
-        }
-
-        .img-fluid {
-            object-fit: cover;
-            margin-top: 3rem;
-            width: 100%;
-            height: 100%;
-        }
-
-        .content {
-            flex-grow: 1;
-            position: relative;
-            z-index: 1;
-        }
-
-        h3 {
-            font-family: 'Jellybelly', cursive;
-            font-weight: bold;
-        }
-
-        h4 {
-            margin-top: 10rem;
-        }
-
-        .featuredProjectsContainer {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            margin-bottom: 5rem;
-        }
-
-        .featuredProjectCard {
-            margin: 1rem;
-            text-align: center;
-            background-color: rgba(236, 217, 217, 0.8);
-            border-radius: 10px;
-            padding: 1rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            width: 100%;
-            max-width: 400px;
-            height: 530px;
-            color: #000000;
-            transition: transform 0.3s, background-color 0.3s;
-            margin-bottom: 10rem;
-        }
-
-        .featuredProjectCard:hover {
-            transform: scale(1.05);
-            background-color: rgba(255, 182, 193, 0.8);
-        }
-
-        .projectImage {
-            border-radius: 8px;
-            margin-bottom: 10px;
-            width: 100%;
-            max-width: 350px;
-            height: 350px;
-        }
-
-        .imageContainer {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        .imageColumn {
-            flex: 1;
-            margin: 20px;
-            max-width: 700px;
-        }
-
-        .contactImage {
-            width: 100%;
-            height: auto;
-            max-width: 600px;
-            object-fit: cover;
-        }
-
-        .card {
-            position: relative;
-            width: 100%;
-            height: 600px;
-            background: #1d1e42;
-            border-radius: 10px;
-            overflow: hidden;
-            margin: 0 auto;
-            border: 2px solid white;
-        }
-
-        .card .imgBx,
-        .card .details {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            box-sizing: border-box;
-            transition: .5s;
-        }
-
-        .card .imgBx {
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: -2rem;
-        }
-
-        .card .imgBx img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card:hover .imgBx {
-            top: 0;
-            left: -100%;
-        }
-
-        .card .imgBx img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .card .details {
-            background: #1d1e42;
-            top: 0;
-            left: 100%;
-            padding: 60px 30px;
-            color: white;
-            text-align: justify;
-            border: 2px solid white;
-            border-radius: 10px;
-            overflow-y: scroll;
-        }
-
-        .card:hover .details {
-            top: 0;
-            left: 0;
-        }
-
-        .card .details h2 {
-            color: #fff;
-            text-align: center;
-            margin: 0;
-            padding: 0 0 10px;
-            border-bottom: 2px solid #fff;
-        }
-
-        .card .details p {
-            margin: 20px 0 0;
-            color: #fff;
-        }
-
-        .aboutThis {
-            color: white;
-            text-align: justify;
-            border: 2px solid white;
-            border-radius: 10px;
-            padding: 15px;
-            width: 80%;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-bottom: 10rem;
-        }
-
-        .welcomeBox {
-            color: white;
-            text-align: center;
-            border: 2px solid white;
-            border-radius: 10px;
-            padding: 15px;
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 30px;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-top: 10rem;
-            margin-bottom: 10rem;
-        }
-
-        .contactBox {
-            color: white;
-            text-align: center;
-            border: 2px solid white;
-            border-radius: 10px;
-            padding: 15px;
-            width: 80%;
-            margin: 0 auto;
-            margin-bottom: 30px;
-            background-color: rgba(0, 0, 0, 0.7);
-            margin-bottom: 10rem;
-        }
-
-        .custom-card {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            background-color: #fff;
-            margin: 50px 10px;
-            padding: 20px 15px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
-            transition: 0.3s ease-in-out;
-            border-radius: 15px;
-            z-index: 100;
-            overflow: hidden;
-        }
-
-        .custom-card:hover {
-            height: 320px;
-        }
-
-        .custom-card .image {
-            position: relative;
-            width: 100%;
-            height: 200px;
-            top: -40%;
-            left: 8px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .custom-card .image img {
-            width: 100%;
-            height: 200px;
-            border-radius: 10px;
-        }
-
-        .custom-card .content {
-            position: relative;
-            top: -130px;
-            padding: 20px 15px;
-            color: #111;
-            text-align: center;
-            visibility: hidden;
-            opacity: 0;
-            transition: 0.3s ease-in-out;
-            max-height: 220px;
-            overflow: auto;
-        }
-
-        .custom-card:hover .content,
-        .custom-card:active .content {
-            margin-top: 30px;
-            visibility: visible;
-            opacity: 1;
-            transition-delay: 0.2s;
-        }
-
-        .custom-card:active {
-            height: 300px;
-        }
-
-        footer {
-            position: relative;
-            padding: 0.8px;
-            color: rgb(104, 103, 103);
-            font-size: 1rem;
-            background-color: #1d1e42;
-            color: white;
-            padding: 20px 20px;
-            text-align: center;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-    </style>
 </head>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg container">
-            <a class="navbar-brand" href="#">Coleen Isles</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            Menu
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#" onclick="showHome()">Home</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="showAbout()">About</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="showProjects()">Projects</a></li>
-                            <li><a class="dropdown-item" href="#" onclick="showContact()">Contact</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+<body id="page-top">
 
-    <section class="showcase">
-        <div class="container-fluid p-0">
-            <div class="row no-gutters">
-                <div class="col-12">
-                    <div class="imageShowcase">
-                        <img src="images/showcase.png" alt="Showcase Image" class="img-fluid">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
+  <!-- Navbar -->
+  <nav class="navbar navbar-b navbar-trans navbar-expand-md fixed-top" id="mainNav">
     <div class="container">
-        <section id="home" section class="features py-5 text-center">
-            <div class="welcomeBox">
-                <h5 style="font-size:30px; font-weight:bolder;">Welcome to my Web Dvelopment Project Website!</h5>
-                <p>Your one-stop destination to explore my journey as an IT student.</p>
-            </div>
 
-            <h4 class="text-center" style="font-size:30px; font-weight:bolder;">About Me</h4>
-            <div class="row align-items-center justify-content-center mt-5">
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="imgBx">
-                            <img src="images/self.png" alt="Coleen Isles" class="img-fluid rounded">
-                        </div>
-                        <div class="details">
-                            <h2>Get to Know Me</h2>
-                            <p>
-                                Hi, I’m Coleen Isles, IT student at the Polytechnic University of the Philippines Sto.
-                                Tomas
-                                Branch, where I am passionate about exploring the vast field of technology and its
-                                applications.
-                                With prior knowledge in C, C++, Java, Python, and currently exploring web technologies
-                                like
-                                PHP, HTML, CSS, and JavaScript, I strive to enhance my skills and contribute to
-                                innovative
-                                projects. My journey in IT has equipped me with problem-solving abilities and a keen
-                                interest in
-                                emerging technologies. I am
-                                eager
-                                to collaborate with like-minded individuals and make a positive impact in the tech
-                                community.
-                            </p>
-                            <p>
-                                When I’m not immersed in coding or tech projects, I enjoy spending time with family and
-                                friends, finding balance in the simple things. I love playing games, movies, music, and
-                                experimenting with new hobbies like cooking or crafts. These moments of relaxation
-                                allow me to recharge, bringing fresh ideas and perspectives back into my work. I also
-                                enjoy organizing my thoughts through documenting and brainstorming, which helps me stay
-                                focused and motivated. While my passion for technology is my main drive, I believe a
-                                well-rounded life helps me stay grounded and creative in all that I do.
-                            </p>
-                        </div>
+      <a class="navbar-brand" href="#">
+        <img src="img/favicon.png" alt="Logo" width="80" height="80">
+      </a>
+
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showHome(); event.preventDefault();">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showAbout(); event.preventDefault();">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showWebDevProjects(); event.preventDefault();">Web Dev</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showAppDevProjects(); event.preventDefault();">App Dev</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" onclick="showContact(); event.preventDefault();">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="intro route bg-image" style="background-image: url(img/bg.png)">
+    <div class="overlayIntro"></div>
+    <div class="introContent display-table">
+      <div class="table-cell">
+        <div class="container">
+          <h1 class="introTitle mb-4">I am Coleen Isles</h1>
+          <p class="introSubtitle"><span class="text-slider-items">3rd Year IT Student,Web Development
+              Enthusiast,Creative Thinker,Tech Explorer,Inspired to Build & Create</span><strong
+              class="text-slider"></strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Home Section -->
+  <section id="home" section class="aboutMf sect-pt4 route" style="display: block;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="box-shadow-full">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="row">
+                  <div class="col-md-12 d-flex justify-content-center">
+                    <div class="aboutImg">
+                      <img src="img/self.jpg" class="img-fluid rounded b-shadow-a" alt="">
                     </div>
+                  </div>
                 </div>
+                <div class="skillMf">
+                  <p class="title-s">Skills</p>
+                  <span>HTML</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70"
+                      aria-valuemin="0" aria-valuemax="100"></div>
+                  </div>
+                  <span>CSS</span> <span class="pull-right">70%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>PHP</span> <span class="pull-right">50%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                  <span>JAVASCRIPT</span> <span class="pull-right">45%</span>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 45%" aria-valuenow="45" aria-valuemin="0"
+                      aria-valuemax="100"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="aboutMe pt-4 pt-md-0">
+                  <div class="title-box-2">
+                    <h5 class="title-left">
+                      About Me
+                    </h5>
+                  </div>
+                  <p class="lead" style="font-size: 1rem;">
+                    Hi, I’m Coleen Isles, IT student at the Polytechnic University of the Philippines Sto. Tomas Branch,
+                    where I am passionate about exploring the vast field of technology and its applications. With prior
+                    knowledge in C, C++, Java, Python, and currently exploring web technologies like PHP, HTML, CSS, and
+                    JavaScript, I strive to enhance my skills and contribute to innovative projects. My journey in IT
+                    has equipped me with problem-solving abilities and a keen interest in emerging technologies. I am
+                    eager to collaborate with like-minded individuals and make a positive impact in the tech community.
+                  </p>
+                  <p class="lead" style="font-size: 1rem;">
+                    When I’m not immersed in coding or tech projects, I enjoy spending time with family and friends,
+                    finding balance in the simple things. I love playing games, movies, music, and experimenting with
+                    new hobbies like cooking or crafts. These moments of relaxation allow me to recharge, bringing fresh
+                    ideas and perspectives back into my featured. I also enjoy organizing my thoughts through
+                    documenting and brainstorming, which helps me stay focused and motivated. While my passion for
+                    technology is my main drive, I believe a well-rounded life helps me stay grounded and creative in
+                    all that I do.
+                  </p>
+                </div>
+              </div>
             </div>
-
-
-            <h4 class="featuredTitle" style="font-size:30px; font-weight:bolder;">Past Projects</h4>
-            <div class="featuredProjectsContainer mt-5">
-                <div class="featuredProjectCard">
-                    <h3>Featured Project 1</h3>
-                    <img src="images/project1.png" alt="Description of Project 1" class="projectImage">
-                    <p>This Java project is inspired by the "Inside Out" theme, centering on the character "Anger" and
-                        designed as a Four Pics One Word game.</p>
-                </div>
-                <div class="featuredProjectCard">
-                    <h3>Featured Project 2</h3>
-                    <img src="images/project2.png" alt="Description of Project 2" class="projectImage">
-                    <p>This recent project, developed using HTML, presents a gallery displaying a variety of images.
-                        It has interactive elements like a button for dark and light mode, and collapse and expand
-                        buttons.</p>
-                </div>
-                <div class="featuredProjectCard">
-                    <h3>Featured Project 3</h3>
-                    <img src="images/project3.png" alt="Description of Project 3" class="projectImage">
-                    <p>This project highlights multimedia skills, featuring Photoshop-edited images showcased in class,
-                        using techniques like cartoonization and bubble-head effects.</p>
-                </div>
-            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <section id="about" section class="features py-5" style="display: none;">
-        <h4 class="text-center" style="font-size:30px; font-weight:bolder;">About This</h4>
-        <div class="aboutThis mt-5">
-            <p>
-                Welcome to my personal website! This site is dedicated to showcasing my web development projects,
-                offering insight into my skills and experiences as an IT student. It features a collection of my work,
-                including various web technologies and projects I’ve developed, demonstrating my expertise in HTML,
-                CSS, and JavaScript. Additionally, you’ll find a portfolio section where you can learn more about
-                me, my journey in the tech field, and my passion for innovation and problem-solving. Explore the site to
-                discover how I bring ideas to life through code!
+    <div class="section-counter paralax-mf bg-image" style="background-image: url(img/bg1.jpg)">
+      <div class="title-box-a text-center">
+        <h3 class="title-a">
+          Other Languages
+        </h3>
+        <p class="subtitle-a">This section highlights experience across multiple programming languages, focusing on
+          building interactive programs and systems. <br> Each language enhances a deeper understanding of logic,
+          efficiency,
+          and design. Below shows the percentage of my expertise in each language.</p>
+        <div class="line-ol"></div>
+      </div>
+      <div class="overlay-mf"></div>
+      <div class="container-a">
+        <div class="row">
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-percent"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="static-number">65</p>
+                <span class="counter-text">C</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-percent"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="static-number">70</p>
+                <span class="counter-text">C++</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-percent"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="static-number">75</p>
+                <span class="counter-text">Java</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 col-lg-3">
+            <div class="counter-box pt-4 pt-md-0">
+              <div class="counter-ico">
+                <span class="ico-circle"><i class="bi bi-percent"></i></span>
+              </div>
+              <div class="counter-num">
+                <p class="static-number">40</p>
+                <span class="counter-text">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-12 text-center">
+          <div class="title-box">
+            <h3 class="title-a">Featured Projects</h3>
+            <p class="subtitle-a">
+              The Featured Projects section showcases a collection of innovative and visually engaging works,
+              highlighting expertise in web design, development, and creative thinking.
             </p>
+            <div class="lineMf"></div>
+          </div>
         </div>
-    </section>
+      </div>
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col">
+          <div class="featuredBox">
+            <a href="img/project1.png" data-lightbox="gallery-mf">
+              <div class="featured-img">
+                <img src="img/project1.png" alt="" class="img-fluid">
+              </div>
+              <div class="featured-content">
+                <h2 class="w-title">Inside Out</h2>
+                <div class="w-more">
+                  <span class="w-category">Java</span> /
+                  <span class="w-date">This Java project is inspired by the "Inside Out" theme, centering on the character
+                    "Anger" and designed as a Four Pics One Word game.</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="featuredBox">
+            <a href="img/project2.png" data-lightbox="gallery-mf">
+              <div class="featured-img">
+                <img src="img/project2.png" alt="" class="img-fluid">
+              </div>
+              <div class="featured-content">
+                <h2 class="w-title">Gallery</h2>
+                <div class="w-more">
+                  <span class="w-category">HTML/CSS</span> /
+                  <span class="w-date">This recent project, developed using HTML, presents a gallery displaying a variety
+                    of images. It has interactive elements like a button for dark and light mode, and collapse and expand
+                    buttons.</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="featuredBox">
+            <a href="img/project3.png" data-lightbox="gallery-mf">
+              <div class="featured-img">
+                <img src="img/project3.png" alt="" class="img-fluid">
+              </div>
+              <div class="featured-content">
+                <h2 class="w-title">Bubble Head Cartoonization</h2>
+                <div class="w-more">
+                  <span class="w-category">Photoshop</span> /
+                  <span class="w-date">This project highlights multimedia skills, featuring Photoshop-edited images
+                    showcased in class, using techniques like cartoonization and bubble-head effects.</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
 
-    <section id="contact" section class="features py-5" style="display: none;">
-        <h4 class="text-center" style="font-size:30px; font-weight:bolder;">Contact Me</h4>
-        <div class="contactBox mt-5">
-            <p class="text-center">If you would like to get in touch, feel free to reach out through my social media
-                below or through this calling card or through clicking the icons displayed down below!</p>
-            <div class="imageContainer">
-                <div class="imageColumn">
-                    <img src="images/isles_front.jpg" alt="Calling Card Front" class="contactImage">
+  <!--/ About Section /-->
+  <section id="about" style="display: none;">
+    <div class="testimonials paralax-mf bg-image" style="background-image: url(img/favicon.png)">
+      <div class="overlay-mf"></div>
+      <div class="containerAbout">
+        <div class="row">
+          <div class="col-md-12">
+            <div id="testimonial-mf">
+              <div class="testimonial-box">
+                <div class="author-test">
+                  <img src="img/self1.jpeg" alt="" class="rounded-circle b-shadow-a">
+                  <span class="title">"Web & App Development: Building Ideas, One Click at a Time"</span>
+                  <p><b>ABOUT THIS</b></p>
                 </div>
-                <div class="imageColumn">
-                    <img src="images/isles_back.jpg" alt="Calling Card Back" class="contactImage">
+                <div class="content-test">
+                  <p class="description lead">
+                    Welcome to my personal website! This platform showcases my journey in IT, highlighting both web and
+                    application development projects. Here, you'll find a collection of my work that demonstrates my
+                    expertise in HTML, CSS, JavaScript, PHP, and SQL. Through these projects, I aim to showcase my
+                    problem-solving skills and passion for innovation. Explore the site to learn more about my
+                    experiences, technical skills, and how I bring ideas to life through coding and development!
+                  </p>
+                  <span class="comit"><i class="fa fa-quote-right"></i></span>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="project" class="features py-5" style="display: none;">
-        <div class="container">
-            <h4 class="text-center" style="color: #02203d; font-size:30px; font-weight:bolder;">Projects</h4>
-            <div class="row justify-content-center mt-5">
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="A04/cellphone.jpg" alt="Mobile Phone">
-                        </div>
-                        <a href="A04/index.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>iPhone 16</h3>
-                                <p>Compact, portable gadget designed for communication, internet access, and
-                                    entertainment.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="images/tiaong.JPG" alt="Tiaong">
-                        </div>
-                        <a href="A05/index.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>Tiaong, Quezon</h3>
-                                <p>Witness the rich culture and mesmerizing places in Tiaong, Quezon!</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="A06/images/activity6.png" alt="Gallery">
-                        </div>
-                        <a href="A06/index.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>ICONLEE</h3>
-                                <p>Your Vision, Through My Lens. Discover a vast collection of
-                                    memorable pictures of my life!</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="A07/dogAPI.png" alt="Dog">
-                        </div>
-                        <a href="A07/index.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>Dog API</h3>
-                                <p>Discover breeds of dogs with unique characteristics and traits that
-                                    are sure to capture your interest</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="images/showcase.png" alt="Video">
-                        </div>
-                        <a href="M01/video.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>Video</h3>
-                                <p>Explore the video and content that beautifully capture the interplay
-                                    of rain and sunshine.</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
-                    <div class="custom-card">
-                        <div class="image">
-                            <img src="M02/images/isles_vectorposter.png" alt="Parallax">
-                        </div>
-                        <a href="M02/index.html" class="text-decoration-none">
-                            <div class="content">
-                                <h3>Parallax</h3>
-                                <p>Dive into the captivating world of parallax effects, where stunning
-                                    layers and depth create an immersive experience that will capture your imagination.
-                                </p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-    </section>
-
-    <script>
-        function showHome() {
-            document.querySelector('#home').style.display = 'block';
-            document.querySelector('#about').style.display = 'none';
-            document.querySelector('#contact').style.display = 'none';
-            document.querySelector('#project').style.display = 'none';
-        }
-
-        function showAbout() {
-            document.querySelector('#about').style.display = 'block';
-            document.querySelector('#home').style.display = 'none';
-            document.querySelector('#contact').style.display = 'none';
-            document.querySelector('#project').style.display = 'none';
-        }
-
-        function showContact() {
-            document.querySelector('#contact').style.display = 'block';
-            document.querySelector('#home').style.display = 'none';
-            document.querySelector('#about').style.display = 'none';
-            document.querySelector('#project').style.display = 'none';
-        }
-
-        function showProjects() {
-            document.querySelector('#project').style.display = 'block';
-            document.querySelector('#home').style.display = 'none';
-            document.querySelector('#about').style.display = 'none';
-            document.querySelector('#contact').style.display = 'none';
-        }
-
-        showHome();
-
-    </script>
-
-    <footer id="footer">
-        <div class="d-flex flex-wrap justify-content-between align-items-center">
-            <div class="col-md-4 d-flex align-items-center footerContent">
-                <span class="mb-3 mb-md-0">© 2024 Isles, Inc</span>
+  <!-- Web Development Section-->
+  <section id="webDevProjects" class="blog-mf sect-pt4 mt-5 route" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              WEB DEVELOPMENT
+            </h3>
+            <p class="subtitle-a">
+              These highlights feature web development projects that showcase my approach to crafting intuitive and
+              dynamic digital solutions.
+            </p>
+            <div class="lineMf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="webdev/A04/cellphone.jpg" alt="Mobile Phone">
             </div>
-            <ul class="nav col-md-4 justify-content-end list-unstyled d-flex footerContent">
-                <li class="ms-3">
-                    <a href="https://x.com/coleenislesss"><i class="bi bi-twitter"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://www.instagram.com/cln.selsi/"><i class="bi bi-instagram"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://www.facebook.com/coleen.isles"><i class="bi bi-facebook"></i></a>
-                </li>
-                <li class="ms-3">
-                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=islesleen@gmail.com" target="_blank">
-                        <i class="bi bi-envelope"></i>
-                    </a>
-                </li>
-            </ul>
+            <a href="webdev/A04/index.html" class="text-decoration-none">
+              <div class="content">
+                <h5>iPhone 16</h5>
+                <p>Compact, portable gadget designed for communication, internet access, and entertainment.</p>
+              </div>
+            </a>
+          </div>
         </div>
-    </footer>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/tiaong.JPG" alt="Tiaong">
+            </div>
+            <a href="webdev/A05/index.html" class="text-decoration-none">
+              <div class="content">
+                <h5>Tiaong, Quezon</h5>
+                <p>Witness the rich culture and mesmerizing places in Tiaong, Quezon!</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="webdev/A06/images/activity6.png" alt="Gallery">
+            </div>
+            <a href="webdev/A06/index.html" class="text-decoration-none">
+              <div class="content">
+                <h5>ICONLEE</h5>
+                <p>Your Vision, Through My Lens. Discover a vast collection of memorable pictures of my life!</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="webdev/A07/dogAPI.png" alt="Dog">
+            </div>
+            <a href="webdev/A07/index.html" class="text-decoration-none">
+              <div class="content">
+                <h5>Dog API</h5>
+                <p>Discover breeds of dogs with unique characteristics and traits that
+                  are sure to capture your interest.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/showcase.png" alt="Video">
+            </div>
+            <a href="webdev/M01/video.html" class="text-decoration-none">
+              <div class="content">
+                <h5>Video</h5>
+                <p>Explore the video and content that beautifully capture the interplay of rain and sunshine.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="webdev/M02/images/isles_vectorposter.png" alt="Parallax">
+            </div>
+            <a href="webdev/M02/index.html" class="text-decoration-none">
+              <div class="content">
+                <h5>Parallax</h5>
+                <p>Dive into the captivating world of parallax effects, where stunning layers and depth create an
+                  immersive experience.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Aplication Development Section -->
+  <section id="appDevProject" class="blog-mf sect-pt4 route" style="display: none;">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="title-box text-center">
+            <h3 class="title-a">
+              APPLICATION DEVELOPMENT
+            </h3>
+            <p class="subtitle-a">
+              These highlights feature application development projects that showcase my approach to building efficient
+              and user-friendly digital solutions.
+            </p>
+            <div class="lineMf"></div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/default.png" alt="Default Pic">
+            </div>
+            <a href="" class="text-decoration-none">
+              <div class="content">
+                <h5>Coming Soon</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, eaque.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/default.png" alt="Default Pic">
+            </div>
+            <a href="" class="text-decoration-none">
+              <div class="content">
+                <h5>Coming Soon</h5>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam, eaque.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/default.png" alt="Default Pic">
+            </div>
+            <a href="" class="text-decoration-none">
+              <div class="content">
+                <h5>Coming Soon</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, eaque.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-3 d-flex justify-content-center mb-4">
+          <div class="custom-card">
+            <div class="image">
+              <img src="img/default.png" alt="Default Pic">
+            </div>
+            <a href="" class="text-decoration-none">
+              <div class="content">
+                <h5>Coming Soon</h5>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam, eaque.</p>
+              </div>
+            </a>
+          </div>
+        </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="paralax-mf footer-paralax bg-image route"
+    style="background-image: url(img/bg2.jpg); display: none;">
+    <div class="overlay-mf"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 mb-5">
+          <div class="contact-mf">
+            <div class="box-shadow-full">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="title-box-2">
+                    <h5 class="title-left">Contact Me</h5>
+                  </div>
+                  <div class="imageContainer">
+                    <img src="img/isles_front.jpg" alt="Top Image" class="contactImage">
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="title-box-2 pt-4 pt-md-0">
+                    <h5 class="title-left">Get in Touch</h5>
+                  </div>
+                  <div class="more-info">
+                    <p class="lead">
+                      I'm always open to new opportunities, collaborations, and exciting projects! Whether you have a
+                      question, an idea, or just want to say hello, feel free to reach out. I’d love to hear from
+                      you—whether it's feedback, a project inquiry, or just a friendly hello. Let’s stay connected, and
+                      I’ll get back to you as soon as possible!
+                    </p>
+                  </div>
+                  <div class="socials">
+                    <h5 class="title-left mb-5">Here are my Socials</h5>
+                    <ul>
+                      <li><a href="https://github.com/colelezzz" target="_blank">
+                          <span class="ico-circle"><i class="fab fa-github"></i></span></a></li>
+                      <li><a href="https://www.facebook.com/share/1AQDKqR2EA/?mibextid=wwXIfr" target="_blank">
+                          <span class="ico-circle"><i class="fab fa-facebook"></i></span></a></li>
+                      <li><a href="https://www.instagram.com/cln.selsi?igsh=azF4YjQ3dTl1NG1q&utm_source=qr"
+                          target="_blank">
+                          <span class="ico-circle"><i class="fab fa-instagram"></i></span></a></li>
+                      <li><a href="https://x.com/coleenislesss?s=21" target="_blank">
+                          <span class="ico-circle"><i class="fab fa-twitter"></i></span></a></li>
+                      <li><a href="https://mail.google.com/mail/?view=cm&fs=1&to=islesleen@gmail.com" target="_blank">
+                          <span class="ico-circle"><i class="fas fa-envelope"></i></span>
+                        </a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <div id="preloader"></div>
+
+  <script>
+    window.addEventListener("load", function () {
+      document.getElementById("preloader").style.display = "none";
+    });
+
+    window.addEventListener("scroll", function () {
+      let backToTop = document.querySelector(".back-to-top");
+      backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    document.querySelector(".back-to-top").addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+
+    function showSection(sectionId, shouldScroll = true) {
+      var sections = document.querySelectorAll("section");
+
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].style.display = "none";
+      }
+
+      var selectedSection = document.getElementById(sectionId);
+      if (selectedSection !== null) {
+        selectedSection.style.display = "block";
+
+        if (shouldScroll) {
+          selectedSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }
+    }
+
+    function showHome() { showSection("home"); }
+    function showAbout() { showSection("about"); }
+    function showWebDevProjects() { showSection("webDevProjects"); }
+    function showAppDevProjects() { showSection("appDevProject"); }
+    function showContact() { showSection("contact"); }
+
+    document.addEventListener("DOMContentLoaded", function () {
+      showSection("home", false);
+    });
+
+
+  </script>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/jquery-migrate-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+  <script src="assets/js/main.js"></script>
 
 </body>
 

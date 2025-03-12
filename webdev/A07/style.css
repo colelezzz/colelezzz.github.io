@@ -202,3 +202,12 @@ label{
   color:black;
   border: rgb(17, 30, 30);
 }
+
+
+@media (max-width: 480px) {
+  #dogSelector {
+      width: 150px;
+      font-size: 0.9rem; 
+      padding: 8px;
+  }
+}
