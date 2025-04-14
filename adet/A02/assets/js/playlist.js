@@ -1,3 +1,4 @@
+//Playlist Array
 var songs = [
     {
         number: "#",
