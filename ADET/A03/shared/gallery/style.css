@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    --space: 2rem;
+    display: grid;
+    align-content: center;
+    overflow: hidden;
+    gap: 2rem;
+    width: 100%;
+    font-family: "Corben", system-ui, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    background-color: #87ceeb;
+}
+
+.scroll {
+    --duration: 60s;
+    --gap: var(--space);
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    transform: skewY(-3deg);
+    padding-left: var(--gap);
+}
+
+.scroll-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scroll-group {
+        animation-play-state: paused;
+    }
+}
+
+.scroll-group img {
+    max-width: clamp(10rem, 1rem + 28vmin, 20rem);
+    aspect-ratio: 1;
+    object-fit: fill;
+    border-radius: 1rem;
+    border: 3px solid black;
+}
+
+.scroll-group p {
+    color: black;
+}
+
+.scroll-text {
+    border-block: 3px solid dodgerblue;
+    padding-block: 0.75rem;
+}
+
+.scroll-reverse .scroll-group {
+    animation-direction: reverse;
+    animation-delay: calc(var(--duration) / -2);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
