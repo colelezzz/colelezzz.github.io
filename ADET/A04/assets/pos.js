@@ -64,7 +64,7 @@ var products = [
         "category": "Vase Arrangements",
         "contents": [
           {
-            "isAvailable": true,
+            "isAvailable": false,
             "name": "Mixed Vase Arrangement",
             "code": "MXVS",
             "bgColor": "#fde2e4",
@@ -320,7 +320,7 @@ var products = [
                     "image": "img/PTP01.jpg"
                 },
                 {
-                    "isAvailable": true,
+                    "isAvailable": false,
                     "name": "Mini Bonsai",
                     "code": "PTP02",
                     "bgColor": "#f1f7e7",
