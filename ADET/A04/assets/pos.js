@@ -449,7 +449,7 @@ var products = [
                     "image": "img/WRTH03.jpg"
                 },
                 {
-                    "isAvailable": false,
+                    "isAvailable": true,
                     "name": "Autumn Wreath",
                     "code": "AUWR",
                     "bgColor": "#fff2e6",  
@@ -464,7 +464,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Prom Corsage",
-                    "code": "CRSG01",
+                    "code": "PMCRSG",
                     "bgColor": "#fff0f5", 
                     "price": 500,
                     "image": "img/CRSG01.jpg"
@@ -472,7 +472,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Wedding Boutonniere",
-                    "code": "BTN01",
+                    "code": "WEDBTNR",
                     "bgColor": "#f0fff0",  
                     "price": 300,
                     "image": "img/BTN01.jpg"
@@ -480,7 +480,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Homecoming Corsage",
-                    "code": "CRSG02",
+                    "code": "HMCRSG",
                     "bgColor": "#fffaf0",  
                     "price": 450,
                     "image": "img/CRSG02.jpg"
@@ -488,7 +488,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Bridal Corsage",
-                    "code": "CRSG03",
+                    "code": "BRCRSG",
                     "bgColor": "#fef6ff",  
                     "price": 600,
                     "image": "img/CRSG03.jpg"
@@ -496,7 +496,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Formal Boutonniere",
-                    "code": "BTN02",
+                    "code": "FRMBTNR",
                     "bgColor": "#f0f8ff", 
                     "price": 350,
                     "image": "img/BTN02.jpg"
@@ -509,7 +509,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Glass Vase",
-                    "code": "ACC01",
+                    "code": "GLVS",
                     "bgColor": "#fdf2f2", 
                     "price": 200,
                     "image": "img/ACC01.jpg"
@@ -517,7 +517,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Greeting Card",
-                    "code": "ACC02",
+                    "code": "GTCR",
                     "bgColor": "#fffbe6", 
                     "price": 50,
                     "image": "img/ACC02.jpg"
@@ -525,7 +525,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Flower Pot",
-                    "code": "ACC03",
+                    "code": "FLPT",
                     "bgColor": "#f0fff0",  
                     "price": 150,
                     "image": "img/ACC03.jpg"
@@ -533,7 +533,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Floral Ribbon",
-                    "code": "ACC04",
+                    "code": "FLRB",
                     "bgColor": "#fff0f5",  
                     "price": 100,
                     "image": "img/ACC04.jpg"
@@ -541,7 +541,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Plant Stand",
-                    "code": "ACC06",
+                    "code": "PLST",
                     "bgColor": "#f0f8ff",  
                     "price": 300,
                     "image": "img/ACC05.jpg"
@@ -549,7 +549,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Wrapping Paper",
-                    "code": "ACC07",
+                    "code": "WRPP",
                     "bgColor": "#fef6ff", 
                     "price": 80,
                     "image": "img/ACC06.jpg"
@@ -562,7 +562,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Lavender Bloom Candle",
-                    "code": "FSC01",
+                    "code": "LBC",
                     "bgColor": "#f3f0ff",
                     "price": 350,
                     "image": "img/FSC.jpg"
@@ -570,7 +570,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Rose Petal Glow Candle",
-                    "code": "FSC02",
+                    "code": "RPGC",
                     "bgColor": "#fff0f5",
                     "price": 400,
                     "image": "img/FSC.jpg"
@@ -578,7 +578,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Sunflower Citrus Candle",
-                    "code": "FSC03",
+                    "code": "SCC",
                     "bgColor": "#fffde6",
                     "price": 380,
                     "image": "img/FSC.jpg"
@@ -586,7 +586,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Peony Blush Candle",
-                    "code": "FSC04",
+                    "code": "PBC",
                     "bgColor": "#ffe6f0",
                     "price": 370,
                     "image": "img/FSC.jpg"
@@ -594,7 +594,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Orchid Mist Candle",
-                    "code": "FSC05",
+                    "code": "OMC",
                     "bgColor": "#e6f0ff",
                     "price": 390,
                     "image": "img/FSC.jpg"
@@ -602,7 +602,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Cherry Blossom Breeze",
-                    "code": "FSC06",
+                    "code": "CBB",
                     "bgColor": "#fff5f0",
                     "price": 410,
                     "image": "img/FSC.jpg"
@@ -610,7 +610,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Gardenia Dream Candle",
-                    "code": "FSC07",
+                    "code": "GDC",
                     "bgColor": "#f0fff0",
                     "price": 360,
                     "image": "img/FSC.jpg"
@@ -618,7 +618,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Hibiscus Sunset Candle",
-                    "code": "FSC08",
+                    "code": "HSC",
                     "bgColor": "#ffe6cc",
                     "price": 395,
                     "image": "img/FSC.jpg"
@@ -626,7 +626,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Jasmine Whisper Candle",
-                    "code": "FSC09",
+                    "code": "JWC",
                     "bgColor": "#f0f8ff",
                     "price": 420,
                     "image": "img/FSC.jpg"
