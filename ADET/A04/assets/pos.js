@@ -118,7 +118,24 @@ var products = [
             "bgColor": "#cdb4db",
             "price": 2000,
             "image": "img/LRV.jpg"
+          },
+          {
+            "isAvailable": true,
+            "name": "Sunflower Vase",
+            "code": "SFV",
+            "bgColor": "#fff7d6",
+            "price": 1500,
+            "image": "img/SFV.jpg"
+          },
+          {
+            "isAvailable": true,
+            "name": "Carnation Mix Vase",
+            "code": "CMV",
+            "bgColor": "#ffe5ec",
+            "price": 1700,
+            "image": "img/CMV.jpg"
           }
+          
         ]
       },    
       {
@@ -201,7 +218,7 @@ var products = [
                 "name": "Carnation",
                 "code": "CAR",
                 "bgColor": "#fff0f5",  
-                "price": 85,
+                "price": 90,
                 "image": "img/CAR.jpg"
             },
             {
@@ -219,6 +236,30 @@ var products = [
                 "bgColor": "#ffe6e1", 
                 "price": 75,
                 "image": "img/CHR.jpg"
+            },
+            {
+                "isAvailable": true,
+                "name": "Blue Hydrangea",
+                "code": "HYD",
+                "bgColor": "#e0f0ff",
+                "price": 130,
+                "image": "img/HYD.jpg"
+            },
+            {
+                "isAvailable": true,
+                "name": "Lavender Stem",
+                "code": "LAV",
+                "bgColor": "#f5e6ff",
+                "price": 95,
+                "image": "img/LAV.jpg"
+            },
+            {
+                "isAvailable": true,
+                "name": "Calla Lily",
+                "code": "CLL",
+                "bgColor": "#fdf6e3",
+                "price": 140,
+                "image": "img/CLL.jpg"
             }
         ]
     },    
@@ -309,7 +350,31 @@ var products = [
                     "bgColor": "#e6ffe6",
                     "price": 450,
                     "image": "img/PTP05.jpg"
-                }                
+                },
+                {
+                    "isAvailable": true,
+                    "name": "Aloe Vera Pot",
+                    "code": "PTP06",
+                    "bgColor": "#f0fff0",
+                    "price": 320,
+                    "image": "img/PTP06.jpg"
+                },
+                {
+                    "isAvailable": true,
+                    "name": "Peace Lily",
+                    "code": "PTP07",
+                    "bgColor": "#edf7ed",
+                    "price": 500,
+                    "image": "img/PTP07.jpg"
+                },
+                {
+                    "isAvailable": true,
+                    "name": "Lavender Pot",
+                    "code": "PTP08",
+                    "bgColor": "#f5e8ff",
+                    "price": 380,
+                    "image": "img/PTP08.jpg"
+                  }                       
             ]
         },
         {
@@ -346,6 +411,14 @@ var products = [
                     "bgColor": "#f7f1e3",  
                     "price": 250,
                     "image": "img/DRF04.jpg"
+                },
+                {
+                    "isAvailable": true,
+                    "name": "Dried Baby's Breath",
+                    "code": "DRF05",
+                    "bgColor": "#fff0f5",  
+                    "price": 280,
+                    "image": "img/DRF05.jpg"
                 }
             ]
         },{
