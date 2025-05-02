@@ -383,7 +383,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Preserved Rose",
-                    "code": "DRF01",
+                    "code": "PVRS",
                     "bgColor": "#fce8e8",  
                     "price": 400,
                     "image": "img/DRF01.jpg"
@@ -391,7 +391,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Dried Lavender",
-                    "code": "DRF02",
+                    "code": "DRLV",
                     "bgColor": "#f3e6ff",  
                     "price": 300,
                     "image": "img/DRF02.jpg"
@@ -399,7 +399,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Dried Sunflower",
-                    "code": "DRF03",
+                    "code": "DRSF",
                     "bgColor": "#fff9db",  
                     "price": 350,
                     "image": "img/DRF03.jpg"
@@ -407,7 +407,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Dried Wheat",
-                    "code": "DRF04",
+                    "code": "DRWH",
                     "bgColor": "#f7f1e3",  
                     "price": 250,
                     "image": "img/DRF04.jpg"
@@ -415,7 +415,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Dried Baby's Breath",
-                    "code": "DRF05",
+                    "code": "DRBB",
                     "bgColor": "#fff0f5",  
                     "price": 280,
                     "image": "img/DRF05.jpg"
@@ -427,7 +427,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Funeral Wreath",
-                    "code": "WRTH01",
+                    "code": "FNWR",
                     "bgColor": "#f2f2f2",  
                     "price": 2000,
                     "image": "img/WRTH01.jpg"
@@ -435,7 +435,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Christmas Wreath",
-                    "code": "WRTH02",
+                    "code": "CHWR",
                     "bgColor": "#e6f2e6", 
                     "price": 1500,
                     "image": "img/WRTH02.jpg"
@@ -443,7 +443,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Spring Wreath",
-                    "code": "WRTH03",
+                    "code": "SPWR",
                     "bgColor": "#fdf0f5",  
                     "price": 1000,
                     "image": "img/WRTH03.jpg"
@@ -451,7 +451,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Autumn Wreath",
-                    "code": "WRTH04",
+                    "code": "AUWR",
                     "bgColor": "#fff2e6",  
                     "price": 1200,
                     "image": "img/WRTH04.jpg"
