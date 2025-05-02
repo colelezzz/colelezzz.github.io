@@ -1,0 +1,81 @@
+header {
+  background: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bolder;
+  color: #e60023;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
+}
+
+.search-bar {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#categories {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+#categories>* {
+  flex: 0 0 auto;
+  width: 200px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #e60023;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c26775;
+}
+
+.category-btn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.category-btn:hover {
+  background-color: #e60023;
+  color: white;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline-secondary {
+  border-radius: 20px;
+}
+
+.unavailable {
+  pointer-events: none;
+}
+
+.unavailable img {
+  opacity: 0.5;
+}
+
+.unavailable .card {
+  background-color: #f0f0f0;
+}
+
+.unavailable small,
+.unavailable strong {
+  color: #888;
+}
