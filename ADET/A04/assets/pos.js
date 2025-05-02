@@ -269,7 +269,7 @@ var products = [
             {
                 "isAvailable": true,
                 "name": "Rose + Chocolate",
-                "code": "GFT01",
+                "code": "RSCH",
                 "bgColor": "#E3735E",  
                 "price": 1000,
                 "image": "img/GFT01.jpg"
@@ -277,7 +277,7 @@ var products = [
             {
                 "isAvailable": true,
                 "name": "Bouquet + Teddy Bear",
-                "code": "GFT02",
+                "code": "BQTB",
                 "bgColor": "#ffe8f0",  
                 "price": 1300,
                 "image": "img/GFT02.jpg"
@@ -285,7 +285,7 @@ var products = [
             {
                 "isAvailable": false,
                 "name": "Wine + Flower",
-                "code": "GFT03",
+                "code": "WNFL",
                 "bgColor": "#fce4ec",  
                 "price": 1500,
                 "image": "img/GFT03.jpg"
@@ -293,7 +293,7 @@ var products = [
             {
                 "isAvailable": true,
                 "name": "Cake + Flower",
-                "code": "GFT04",
+                "code": "CKFL",
                 "bgColor": "#fff0e1",  
                 "price": 1500,
                 "image": "img/GFT04.jpg"
@@ -301,7 +301,7 @@ var products = [
             {
                 "isAvailable": true,
                 "name": "Bouquet + Photo + Card",
-                "code": "GFT05",
+                "code": "BQPC",
                 "bgColor": "#e5f4ff", 
                 "price": 800,
                 "image": "img/GFT05.jpg"
@@ -314,7 +314,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Succulent Pot",
-                    "code": "PTP01",
+                    "code": "SCPT",
                     "bgColor": "#e3f9e5",
                     "price": 250,
                     "image": "img/PTP01.jpg"
@@ -322,7 +322,7 @@ var products = [
                 {
                     "isAvailable": false,
                     "name": "Mini Bonsai",
-                    "code": "PTP02",
+                    "code": "MNBS",
                     "bgColor": "#f1f7e7",
                     "price": 600,
                     "image": "img/PTP02.jpg"
@@ -330,7 +330,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Cactus Pot",
-                    "code": "PTP03",
+                    "code": "CCPT",
                     "bgColor": "#f9fbe7",
                     "price": 300,
                     "image": "img/PTP03.jpg"
@@ -338,7 +338,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Ficus Tree",
-                    "code": "PTP04",
+                    "code": "FCTR",
                     "bgColor": "#e6f2e6",
                     "price": 800,
                     "image": "img/PTP04.jpg"
@@ -346,7 +346,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Snake Plant",
-                    "code": "PTP05",
+                    "code": "SNPT",
                     "bgColor": "#e6ffe6",
                     "price": 450,
                     "image": "img/PTP05.jpg"
@@ -354,7 +354,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Aloe Vera Pot",
-                    "code": "PTP06",
+                    "code": "AVPT",
                     "bgColor": "#f0fff0",
                     "price": 320,
                     "image": "img/PTP06.jpg"
@@ -362,7 +362,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Peace Lily",
-                    "code": "PTP07",
+                    "code": "PCLY",
                     "bgColor": "#edf7ed",
                     "price": 500,
                     "image": "img/PTP07.jpg"
@@ -370,7 +370,7 @@ var products = [
                 {
                     "isAvailable": true,
                     "name": "Lavender Pot",
-                    "code": "PTP08",
+                    "code": "LVPT",
                     "bgColor": "#f5e8ff",
                     "price": 380,
                     "image": "img/PTP08.jpg"
