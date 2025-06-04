@@ -1,0 +1,120 @@
+  body {
+            background-color: #f9f9ff;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #8C52FF;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #8C52FF;
+        }
+
+        .reminder-app.card {
+            height: 500px;
+            width: 700px;
+            background-color: #CCCCFF;
+            border: 1.5px solid #ccc;
+            box-shadow: 0 4px 12px rgba(140, 82, 255, 0.15);
+            border-radius: 12px;
+            max-width: 700px;
+            margin: 2rem auto;
+        }
+
+        .reminder-app .card-header {
+            font-family: "Roboto Mono", monospace;
+            font-weight: bold;
+            color: #8C52FF;
+            font-size: clamp(1.5rem, 2vw + 1rem, 2.2rem);
+            text-align: center;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            background-color: transparent;
+            border-bottom: none;
+            padding-top: 2rem;
+            padding-bottom: 0.5rem;
+        }
+
+        #new-task {
+            font-family: "Roboto Mono", monospace;
+            font-size: clamp(0.9rem, 1vw + 0.5rem, 1.1rem);
+            padding: 0.75rem 1rem;
+            border: 2px solid #8C52FF;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+            outline-offset: 2px;
+            outline-color: transparent;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        #new-task::placeholder {
+            color: #aaa;
+        }
+
+        #new-task:focus {
+            border-color: #8C52FF;
+            outline-color: #8C52FF;
+            box-shadow: 0 0 8px #8C52FF;
+        }
+        
+        #task-list {
+            list-style: none;
+            padding-left: 0;
+            margin-top: 1.5rem;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        #task-list li {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin-bottom: 0.6rem;
+            padding: 0.7rem 1rem;
+            font-family: "Roboto Mono", monospace;
+            font-size: clamp(0.9rem, 1vw + 0.4rem, 1.1rem);
+            color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 1px 5px rgba(140, 82, 255, 0.1);
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #task-list li span {
+            flex: 1 1 auto;
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        #task-list li:hover {
+            background-color: #f0e7ff;
+        }
+
+        #task-list li.done {
+            text-decoration: line-through;
+            color: #aaa;
+            background-color: #e0d6f9;
+        }
+
+        #task-list button {
+            background: transparent;
+            border: none;
+            color: #8C52FF;
+            font-size: 1.25rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            padding: 0 0.5rem;
+        }
+
+        #task-list button:hover {
+            color: crimson;
+        }
