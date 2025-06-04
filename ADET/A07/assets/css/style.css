@@ -20,6 +20,7 @@
 
  .custom-navbar {
      background-color: #CCCCFF;
+     border-bottom: 2px solid #8C52FF;
  }
 
  .nav-link {
@@ -53,6 +54,10 @@
      outline: none !important;
      box-shadow: none !important;
      border: none !important;
+ }
+
+ .title {
+     color: #8C52FF;
  }
 
  #schedule {
