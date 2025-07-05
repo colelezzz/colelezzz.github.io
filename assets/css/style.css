@@ -146,7 +146,7 @@ a:hover {
 .socials ul {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  gap: 10px;
   padding: 0;
   max-width: 100%;
   list-style: none;
@@ -157,9 +157,9 @@ a:hover {
 }
 
 .socials .ico-circle {
-  height: 40px;
-  width: 40px;
-  font-size: 1.7rem;
+  height: clamp(35px, 6vw, 50px);
+  width: clamp(35px, 6vw, 50px);
+  font-size: clamp(1.4rem, 5vw, 2rem);
   border-radius: 50%;
   line-height: 1.4;
   margin: 0 15px 0 0;
@@ -202,7 +202,7 @@ a:hover {
   right: 15px;
   bottom: 15px;
   transition: background 0.5s;
-  z-index: 11;
+  z-index: 2;
 }
 
 .back-to-top i {
@@ -217,7 +217,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 9999;
+  z-index: 2;
   overflow: hidden;
   background: #fff;
 }
@@ -691,17 +691,18 @@ a:hover {
 
 .custom-card {
   position: relative;
-  width: 100%;
+  width: auto;
+  max-width: 380px;
   height: 200px;
   background-color: #fff;
   margin: 50px 10px;
-  padding: 20px 15px;
+  padding: 15px 10px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
   transition: 0.3s ease-in-out;
   border-radius: 15px;
-  z-index: 100;
+  /* z-index: 100; */
 }
 
 .custom-card:hover {
